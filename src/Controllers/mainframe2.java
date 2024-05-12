@@ -162,69 +162,34 @@ public class mainframe2 {
             if (Sort_Choice.getValue() == "Title")
             {
                 Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'t');
-                for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
-                {
-                    System.out.println(Init.Availablecourses.get(i).getTitle());
-                    Available_Courses.getItems().add(Init.Availablecourses.get(i).getTitle());
-                    Sort_L.getItems().add(Init.Availablecourses.get(i).getTitle());
-                    System.out.println("===================================");
-                }
             }
             else if (Sort_Choice.getValue() == "Price")
             {
                 Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'p');
-                for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
-                {
-                    System.out.println(Init.Availablecourses.get(i).getTitle());
-                    Available_Courses.getItems().add(Init.Availablecourses.get(i).getTitle());
-                    Sort_L.getItems().add(String.valueOf(Init.Availablecourses.get(i).getPrice()));
-                    System.out.println("===================================");
-                }
             }
             else if (Sort_Choice.getValue() == "Week Duration")
             {
                 Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'d');
-                for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
-                {
-                    System.out.println(Init.Availablecourses.get(i).getTitle());
-                    Available_Courses.getItems().add(Init.Availablecourses.get(i).getTitle());
-                    Sort_L.getItems().add(String.valueOf(Init.Availablecourses.get(i).getWeek_duration()));
-                    System.out.println("===================================");
-                }
             }
             else if (Sort_Choice.getValue() == "Number of Chapters")
             {
                 Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'c');
-                for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
+            }
+            else if (Sort_Choice.getValue() == "Number of Students")
+            {
+                Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'s');
+            }
+            else 
+            {
+                Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'q');
+            }
+            for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
                 {
                     System.out.println(Init.Availablecourses.get(i).getTitle());
                     Available_Courses.getItems().add(Init.Availablecourses.get(i).getTitle());
                     Sort_L.getItems().add(String.valueOf(Init.Availablecourses.get(i).chaptersCount()));
                     System.out.println("===================================");
                 }
-            }
-            else if (Sort_Choice.getValue() == "Number of Students")
-            {
-                Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'s');
-                for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
-                {
-                    System.out.println(Init.Availablecourses.get(i).getTitle());
-                    Available_Courses.getItems().add(Init.Availablecourses.get(i).getTitle());
-                    Sort_L.getItems().add(String.valueOf(Init.Availablecourses.get(i).studentsCount()));
-                    System.out.println("===================================");
-                }
-            }
-            else 
-            {
-                Init.Availablecourses = Course.sortCourses(Init.Availablecourses,'q');
-                for(int i =0 ; i<Init.Availablecourses.size() ; i++)                                     
-                {
-                    System.out.println(Init.Availablecourses.get(i).getTitle());
-                    Available_Courses.getItems().add(Init.Availablecourses.get(i).getTitle());
-                    Sort_L.getItems().add(String.valueOf(Init.Availablecourses.get(i).getCode()));
-                    System.out.println("===================================");
-                }
-            }
       
         });
 
